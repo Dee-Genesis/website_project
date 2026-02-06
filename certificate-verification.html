@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification - Chartered Institute of Education & Training</title>
+    <meta name="description" content="Official procedure for verifying certificates and professional designations issued by CIET. Ensuring authenticity, integrity, and validity of all credentials.">
+    <link rel="icon" type="image/png" href="assets/logos/ciet-logo.png">
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== CONTAINERS ===== */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 { font-size: 48px; line-height: 1.2; }
+        h2 { font-size: 36px; line-height: 1.3; margin-top: 40px; }
+        h3 { font-size: 24px; line-height: 1.4; margin-top: 30px; }
+        h4 { font-size: 20px; line-height: 1.4; margin-top: 25px; }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: #1a1a1a;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .main-nav {
+            position: relative;
+        }
+
+        .main-nav > ul {
+            list-style: none;
+            display: flex;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+            margin: 0;
+        }
+
+        .main-nav > ul > li > a {
+            color: #fff;
+            font-weight: 500;
+            padding: 30px 20px;
+            display: block;
+            font-size: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav > ul > li > a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .has-dropdown > a::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 8px;
+            vertical-align: middle;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 280px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 999;
+            border-top: 3px solid #caa547;
+        }
+
+        .has-dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu.with-image {
+            display: grid;
+            grid-template-columns: 280px 300px;
+            min-width: 580px;
+        }
+
+        .mega-menu-links {
+            padding: 20px 0;
+        }
+
+        .mega-menu-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mega-menu-links li {
+            margin: 0;
+        }
+
+        .mega-menu-links a {
+            display: block;
+            padding: 12px 30px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .mega-menu-links a:hover {
+            background: #f8f9fa;
+            color: #caa547;
+            border-left-color: #caa547;
+            padding-left: 35px;
+        }
+
+        .mega-menu-image {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mega-menu-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(135deg, rgba(26,26,26,0.95), rgba(26,26,26,0.9)),
+                        url('assets/images/certifications/certification-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255,255,255,0.95);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .breadcrumb-nav a {
+            color: #1a1a1a;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: #caa547;
+        }
+
+        .breadcrumb-nav span {
+            color: #666;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 80px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== INTRO SECTION ===== */
+        .intro-section {
+            background: linear-gradient(135deg, rgba(26,26,26,0.05), rgba(202,165,71,0.05));
+            padding: 60px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            border-left: 5px solid #caa547;
+        }
+
+        .intro-section h2 {
+            margin-top: 0;
+            font-size: 36px;
+            color: #1a1a1a;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        /* ===== VERIFICATION SECTIONS ===== */
+        .verification-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border-left: 4px solid #caa547;
+            transition: all 0.3s ease;
+        }
+
+        .verification-section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .verification-section h3 {
+            color: #1a1a1a;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .verification-section h4 {
+            color: #1a1a1a;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .verification-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .verification-section ul li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .verification-section ul li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #caa547;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .verification-section ol {
+            padding-left: 20px;
+        }
+
+        .verification-section ol li {
+            margin-bottom: 12px;
+        }
+
+        /* ===== EMAIL BOX ===== */
+        .email-box {
+            background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .email-box p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .email-box a {
+            color: #caa547;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .email-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== TABLE STYLES ===== */
+        .standing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .standing-table thead {
+            background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+            color: #fff;
+        }
+
+        .standing-table th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .standing-table td {
+            padding: 15px 18px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+        }
+
+        .standing-table tbody tr:hover {
+            background: rgba(202,165,71,0.05);
+        }
+
+        .standing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ===== SECURITY FEATURES BOX ===== */
+        .security-box {
+            background: linear-gradient(135deg, rgba(202,165,71,0.1), rgba(202,165,71,0.05));
+            padding: 40px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #caa547;
+        }
+
+        .security-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .security-box ul li {
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 15px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .security-box ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #caa547;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        /* ===== WARNING BOX ===== */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(217,83,79,0.1), rgba(217,83,79,0.05));
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #d9534f;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .warning-box strong {
+            color: #d9534f;
+        }
+
+        /* ===== HIGHLIGHT BOX ===== */
+        .highlight-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            border-left: 4px solid #1a1a1a;
+            margin: 25px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 17px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* ===== FADE IN ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #caa547;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #caa547;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mega-menu.with-image {
+                grid-template-columns: 1fr;
+                min-width: 280px;
+            }
+
+            .mega-menu-image {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* ===== IMPROVED MOBILE MENU STYLES ===== */
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2d2d2d;
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav > ul {
+                flex-direction: column;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 15px 5%;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                color: #ffffff;
+                font-size: 16px;
+            }
+
+            /* Dropdown arrow color improved */
+            .has-dropdown > a::after {
+                border-top-color: #caa547;
+                float: right;
+                margin-top: 5px;
+            }
+
+            /* Rotate arrow when active */
+            .has-dropdown.active > a::after {
+                transform: rotate(180deg);
+            }
+
+            .mega-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: #3d3d3d;
+                display: none;
+                border-top: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .has-dropdown.active .mega-menu {
+                display: block;
+                max-height: 500px;
+            }
+
+            /* Improved dropdown link visibility */
+            .mega-menu-links a {
+                padding: 12px 8%;
+                color: #f0f0f0;
+                font-size: 15px;
+                border-left: 3px solid transparent;
+            }
+
+            .mega-menu-links a:hover {
+                background: rgba(202,165,71,0.2);
+                color: #caa547;
+                border-left-color: #caa547;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+
+            .page-hero h1 {
+                font-size: 42px;
+            }
+
+            .intro-section,
+            .verification-section,
+            .security-box {
+                padding: 30px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .standing-table {
+                font-size: 14px;
+            }
+
+            .standing-table th,
+            .standing-table td {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                
+                <a href="index.html"><img src="assets/logos/ciet-logo.png" alt="CIET Logo"></a>
+
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <!-- About Us Dropdown (Simple) -->
+                    <li class="has-dropdown">
+                        <a href="#">About Us</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-links">
+                                <ul>
+                                    <li><a href="institute-overview.html">Institute Overview</a></li>
+                                    <li><a href="vision-mission.html">Vision and Mission</a></li>
+                                    <li><a href="objectives.html">Objectives</a></li>
+                                    <li><a href="core-values.html">Core Values</a></li>
+                                    <li><a href="strategic-focus.html">Strategic Focus</a></li>
+                                    <li><a href="impact-goals.html">Impact Goals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+ <!-- Membership Dropdown (With Image - ) -->
+                    <li class="has-dropdown">
+                        <a href="#">Membership</a>
+                        <div class="mega-menu with-image">
+                            <div class="mega-menu-links">
+                                <ul>
+                                    <li><a href="overview.html">Overview</a></li>
+                                    <li><a href="why-join.html">Why Join CIET?</a></li>
+                                    <li><a href="membership-grades.html">Membership Grade</a></li>
+                                    <li><a href="upgrade-framework.html">CIET Membership Upgrade Framework</a></li>
+                                    <li><a href="subscription.html">Annual Subscription</a></li>
+                                    <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                                    <li><a href="cpd.html">Continuous Professional Development</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-image">
+                                <img src="assets/images/membership/networking-event.jpg" alt="Membership">
+                            </div>
+                        </div>
+                    </li>
+			<li><a href="examination.html">Examination Framework</a></li>	
+                    <li><a href="certifications.html">Professional Certifications</a></li>
+                    
+                    
+                   
+
+                 
+                </ul>
+            </nav>
+
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Certificate Verification</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Certificate Verification Guidelines</h1>
+            <p>Ensuring the authenticity, integrity, and validity of all CIET-issued credentials and protecting the credibility of certified professionals.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="main-content">
+        <div class="container">
+
+            <!-- PURPOSE SECTION -->
+            <div class="intro-section fade-in">
+                <h2>1. Purpose</h2>
+                <p>These guidelines establish the official procedure for verifying certificates and professional designations issued by the Chartered Institute of Education and Training (CIET).</p>
+                <p>They ensure the authenticity, integrity, and validity of all CIET-issued credentials and protect the credibility of certified professionals and the Institute.</p>
+                <p><strong>Verification applies to:</strong></p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding-left: 30px; position: relative; margin-bottom: 10px;">
+                        <span style="position: absolute; left: 0; color: #caa547; font-weight: bold;">•</span>
+                        Professional Certifications (e.g., CPE, CPT, CCIS, etc.)
+                    </li>
+                    <li style="padding-left: 30px; position: relative; margin-bottom: 10px;">
+                        <span style="position: absolute; left: 0; color: #caa547; font-weight: bold;">•</span>
+                        Membership Status (Student, Associate, Full Member, Fellow)
+                    </li>
+                    <li style="padding-left: 30px; position: relative; margin-bottom: 10px;">
+                        <span style="position: absolute; left: 0; color: #caa547; font-weight: bold;">•</span>
+                        CPD (Continuous Professional Development) compliance
+                    </li>
+                    <li style="padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #caa547; font-weight: bold;">•</span>
+                        Subscription standing
+                    </li>
+                </ul>
+            </div>
+
+            <!-- VERIFICATION PROCESS -->
+            <div class="verification-section fade-in">
+                <h3>2. Verification Process</h3>
+                <p>All verifications are conducted manually by the CIET Verification Department.</p>
+                <p><strong>There is no online verification portal at this time.</strong></p>
+                
+                <h4>Verification Request Procedure</h4>
+                <p>All verification inquiries must be sent to:</p>
+                
+                <div class="email-box">
+                    <p>📩 <a href="mailto:verifycertificate@cietglobal.us">verifycertificate@cietglobal.us</a></p>
+                </div>
+
+                <p><strong>Each request should include:</strong></p>
+                <ol>
+                    <li>Full name of the certificate holder (as shown on the certificate)</li>
+                    <li>Certificate title (e.g., Certified Professional Educator – CPE)</li>
+                    <li>Certificate number (bottom of the document)</li>
+                    <li>Date of issue (if available)</li>
+                    <li>Name of requesting organization or individual</li>
+                    <li>Purpose of verification (e.g., employment, accreditation, or partnership)</li>
+                </ol>
+            </div>
+
+            <!-- PROCESSING AND CONFIRMATION -->
+            <div class="verification-section fade-in">
+                <h3>3. Processing and Confirmation</h3>
+                <ol>
+                    <li><strong>Receipt:</strong> CIET acknowledges the verification request via email.</li>
+                    <li><strong>Validation:</strong> The certificate and member record are checked against the CIET Certification and Membership Registry.</li>
+                    <li><strong>Issuance of Verification Report:</strong> Within 5–7 business days, the requester receives an official verification letter confirming:
+                        <ul style="margin-top: 10px;">
+                            <li>Certification title and holder name</li>
+                            <li>Certification status (Valid, Expired, Suspended, or Revoked)</li>
+                            <li>Certification validity period</li>
+                            <li>Membership standing (Good Standing or Inactive)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- CERTIFICATE VALIDITY -->
+            <div class="verification-section fade-in">
+                <h3>4. Certificate Validity</h3>
+                <ul>
+                    <li>All CIET Professional Certifications are valid for three (3) years from the date of issue.</li>
+                    <li>The validity period is clearly printed on the certificate.</li>
+                    <li>Certified professionals must apply for renewal before expiry, submitting evidence of:
+                        <ul style="margin-top: 10px;">
+                            <li>30 CPD hours per year, and</li>
+                            <li>Continuous professional practice</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="warning-box">
+                    <p>Failure to renew within the stipulated time may result in the certification status being marked as <strong>Expired</strong> or <strong>Inactive</strong> in the CIET Registry.</p>
+                </div>
+            </div>
+
+            <!-- MEMBERSHIP STANDING -->
+            <div class="verification-section fade-in">
+                <h3>5. Membership Standing</h3>
+                <ul>
+                    <li>All CIET members are required to pay their annual subscription fees to maintain active membership status and good standing.</li>
+                    <li>Membership in good standing is a prerequisite for certificate renewal, verification, and CPD recognition.</li>
+                    <li>Members who fail to renew their annual subscription within three (3) months of the due date may be listed as Inactive Members until payment is received.</li>
+                </ul>
+
+                <h4>Standing Categories:</h4>
+                <table class="standing-table">
+                    <thead>
+                        <tr>
+                            <th>Standing</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Good Standing</strong></td>
+                            <td>Member has paid annual subscriptions and met CPD requirements.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inactive</strong></td>
+                            <td>Member has not renewed annual subscription or failed CPD compliance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Suspended</strong></td>
+                            <td>Membership or certification temporarily inactive due to disciplinary review.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revoked</strong></td>
+                            <td>Membership or certification permanently withdrawn for misconduct or forgery.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CERTIFICATE SECURITY FEATURES -->
+            <div class="verification-section fade-in">
+                <h3>6. Certificate Security Features</h3>
+                <p>Each official CIET certificate includes the following security elements:</p>
+                
+                <div class="security-box">
+                    <ul>
+                        <li>Unique Certificate ID Number</li>
+                        <li>Official CIET embossed seal</li>
+                        <li>Authorized signatures of CIET executives</li>
+                        <li>Clearly marked validity period (3 years)</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <p>Any document lacking these features should be considered <strong>unauthorized or counterfeit</strong> and reported to the CIET Secretariat.</p>
+                </div>
+            </div>
+
+            <!-- REPORTING FORGED CERTIFICATES -->
+            <div class="verification-section fade-in">
+                <h3>7. Reporting Forged or Fraudulent Certificates</h3>
+                <p>All suspected falsifications or unauthorized reproductions must be reported immediately to:</p>
+                
+                <div class="email-box">
+                    <p>📩 <a href="mailto:verifycertificate@cietglobal.us">verifycertificate@cietglobal.us</a></p>
+                </div>
+
+                <p><strong>The report should include:</strong></p>
+                <ul>
+                    <li>A copy of the questionable certificate (scanned or photographed)</li>
+                    <li>Name of the certificate holder (if known)</li>
+                    <li>Relevant details (institution, date, etc.)</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>All reports are treated as strictly confidential, and the CIET Disciplinary and Verification Committees shall investigate accordingly.</p>
+                </div>
+            </div>
+
+            <!-- CONFIDENTIALITY -->
+            <div class="verification-section fade-in">
+                <h3>8. Confidentiality and Data Protection</h3>
+                <ul>
+                    <li>All verification records are handled in compliance with international data protection laws.</li>
+                    <li>Information is shared only with the verified requester or legally authorized parties.</li>
+                    <li>CIET does not release personal or professional information without consent.</li>
+                </ul>
+            </div>
+
+            <!-- ENFORCEMENT AND REVIEW -->
+            <div class="verification-section fade-in">
+                <h3>9. Enforcement and Review</h3>
+                <ul>
+                    <li>These guidelines are enforced by the CIET Verification and Certification Committee.</li>
+                    <li>CIET reserves the right to modify or update these guidelines as necessary to align with evolving professional and legal standards.</li>
+                    <li>The guidelines shall be reviewed every two (2) years or as deemed appropriate by the CIET Council.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="assets/logos/ciet-logo.png" alt="CIET Logo" style="height: 50px; margin-bottom: 20px;">
+                    <p>Chartered Institute of Education & Training (CIET) is a professional body dedicated to advancing excellence in education and training professions worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61579484342789" aria-label="Facebook"><img src="assets/logos/facebook.png" alt="Facebook"></a>
+                        <a href="https://x.com" aria-label="Twitter"><img src="assets/logos/twitter.jpg" alt="Twitter"></a>
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn"><img src="assets/logos/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com" aria-label="YouTube"><img src="assets/logos/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="institute-overview.html">About Us</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="examination.html">Examination</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="subscription.html">Annual Subscription</a></li>
+                        <li><a href="mailto:certification@cietglobal.us">Application Portal</a></li>
+                        <li><a href="certificate-verification.html">Certificate Verification</a></li>
+                        <li><a href="examination.html">Examination Framework</a></li>
+                        <li><a href="membership-grades.html">Membership Fees</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>1001 Bishop ST STE 2685A<br>
+                    Honolulu, Hawaii 96813<br>
+                    USA</p>
+                    <p><strong>Email:</strong> info@cietglobal.us<br>
+                    <strong>Phone:</strong> +1 (480) 955-0876</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Chartered Institute of Education & Training. All rights reserved. | <a href="privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.7);">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== SCROLL ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ===== IMPROVED MOBILE MENU =====
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+
+        // Toggle main menu
+        mobileToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+
+        // Handle dropdown clicks in mobile - MANUAL TOGGLE, NO AUTO-OPEN
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    // Close other dropdowns first
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('active');
+                        }
+                    });
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.main-nav') && !e.target.closest('.mobile-menu-toggle')) {
+                mainNav.classList.remove('active');
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

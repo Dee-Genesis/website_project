@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examination Framework - Chartered Institute of Engineering & Technology</title>
+    <title>Examination Framework - Chartered Institute of Education & Training</title>
     <meta name="description" content="CIET's structured examination framework ensures rigorous assessment and professional development for educators and trainers worldwide.">
     <link rel="icon" type="image/png" href="assets/logos/ciet-logo.png">
     <style>
@@ -37,7 +37,7 @@
 
         /* ===== TYPOGRAPHY ===== */
         h1, h2, h3, h4, h5, h6 {
-            color: #002147;
+            color: #2b2b2b;
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -72,7 +72,7 @@
 
         /* ===== HEADER ===== */
         .site-header {
-            background: #002147;
+            background: #2b2b2b;
             color: #fff;
             position: sticky;
             top: 0;
@@ -242,7 +242,7 @@
 
         /* ===== PAGE HEADER ===== */
         .page-header {
-            background: linear-gradient(135deg, rgba(0,33,71,0.95), rgba(0,33,71,0.9)),
+            background: linear-gradient(135deg, rgba(43,43,43,0.95), rgba(43,43,43,0.9)),
                         url('assets/images/examination/exam-hero.jpg');
             background-size: cover;
             background-position: center;
@@ -336,7 +336,7 @@
         .highlight-item h4 {
             margin: 0 0 10px 0;
             font-size: 18px;
-            color: #002147;
+            color: #2b2b2b;
         }
 
         .highlight-item p {
@@ -367,7 +367,7 @@
         }
 
         .level-header {
-            background: linear-gradient(135deg, #002147, #09305A);
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
             color: #fff;
             padding: 35px 40px;
             display: flex;
@@ -379,7 +379,7 @@
             min-width: 80px;
             height: 80px;
             background: #caa547;
-            color: #002147;
+            color: #2b2b2b;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -417,7 +417,7 @@
         .level-purpose h4 {
             margin: 0 0 10px 0;
             font-size: 18px;
-            color: #002147;
+            color: #2b2b2b;
         }
 
         .level-purpose p {
@@ -451,7 +451,7 @@
             display: inline-block;
             width: 30px;
             height: 30px;
-            background: #002147;
+            background: #2b2b2b;
             color: #caa547;
             border-radius: 50%;
             text-align: center;
@@ -468,7 +468,7 @@
         }
 
         .level-award {
-            background: linear-gradient(135deg, #002147, #09305A);
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
             color: #fff;
             padding: 25px 30px;
             border-radius: 6px;
@@ -525,7 +525,7 @@
         .guideline-icon {
             min-width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #002147, #09305A);
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -536,7 +536,7 @@
 
         .guideline-card h4 {
             margin: 0;
-            color: #002147;
+            color: #2b2b2b;
             font-size: 20px;
         }
 
@@ -590,7 +590,7 @@
 
         .method-card h4 {
             margin: 0;
-            color: #002147;
+            color: #2b2b2b;
             font-size: 20px;
         }
 
@@ -612,7 +612,7 @@
         }
 
         .grading-table thead {
-            background: linear-gradient(135deg, #002147, #09305A);
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
             color: #fff;
         }
 
@@ -644,7 +644,7 @@
 
         /* ===== EXEMPTION SECTION ===== */
         .exemption-section {
-            background: linear-gradient(135deg, #002147, #09305A);
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
             color: #fff;
             padding: 80px 0;
             margin: 80px 0;
@@ -719,7 +719,7 @@
 
         .exemption-note {
             background: #caa547;
-            color: #002147;
+            color: #2b2b2b;
             padding: 30px;
             border-radius: 8px;
             margin-top: 50px;
@@ -750,7 +750,7 @@
 
         /* ===== CTA SECTION ===== */
         .cta-section {
-            background: #002147;
+            background: #2b2b2b;
             color: #fff;
             padding: 80px 0;
             text-align: center;
@@ -794,7 +794,7 @@
 
         .btn-white {
             background: #fff;
-            color: #002147;
+            color: #2b2b2b;
         }
 
         .btn-white:hover {
@@ -803,7 +803,7 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background: #002147;
+            background: #2b2b2b;
             color: #fff;
             padding: 80px 0 0;
         }
@@ -903,13 +903,18 @@
         }
 
         @media (max-width: 768px) {
+            /* IMPROVED MOBILE MENU - SCROLLABLE */
             .main-nav {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #002147;
+                background: #2b2b2b;
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-overflow-scrolling: touch;
             }
 
             .main-nav.active {
@@ -925,19 +930,49 @@
                 border-bottom: 1px solid rgba(255,255,255,0.1);
             }
 
+            /* IMPROVED MEGA MENU FOR MOBILE */
             .mega-menu {
                 position: static;
                 opacity: 1;
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                background: rgba(0,0,0,0.2);
+                background: #3d3d3d;
                 display: none;
                 border-top: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
             }
 
             .has-dropdown.active .mega-menu {
                 display: block;
+                max-height: 500px;
+            }
+
+            /* IMPROVED DROPDOWN LINK VISIBILITY */
+            .mega-menu-links a {
+                padding: 12px 8%;
+                color: #ffffff;
+                background: transparent;
+                border-left: 3px solid transparent;
+            }
+
+            .mega-menu-links a:hover {
+                background: rgba(202, 165, 71, 0.2);
+                color: #caa547;
+                border-left-color: #caa547;
+                padding-left: calc(8% + 5px);
+            }
+
+            /* DROPDOWN ARROW ROTATION */
+            .has-dropdown > a::after {
+                float: right;
+                transition: transform 0.3s ease;
+            }
+
+            .has-dropdown.active > a::after {
+                transform: rotate(180deg);
             }
 
             .mobile-menu-toggle {
@@ -984,20 +1019,22 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+<!-- HEADER -->
     <header class="site-header">
         <div class="container header-flex">
             <div class="logo">
-                <img src="assets/logos/ciet-logo.png" alt="CIET Logo">
-                <a href="index.html">CIET</a>
+                
+                <a href="index.html"><img src="assets/logos/ciet-logo.png" alt="CIET Logo"></a>
+
             </div>
 
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     
+                    <!-- About Us Dropdown (Simple) -->
                     <li class="has-dropdown">
-                        <a href="institute-overview.html">About Us</a>
+                        <a href="#">About Us</a>
                         <div class="mega-menu">
                             <div class="mega-menu-links">
                                 <ul>
@@ -1011,20 +1048,16 @@
                             </div>
                         </div>
                     </li>
-
-                    <li><a href="certifications.html">Certifications</a></li>
-                    <li><a href="examination.html" class="active">Examination</a></li>
-                    
+ <!-- Membership Dropdown (With Image - ) -->
                     <li class="has-dropdown">
-                        <a href="membership.html">Membership</a>
+                        <a href="#">Membership</a>
                         <div class="mega-menu with-image">
                             <div class="mega-menu-links">
                                 <ul>
                                     <li><a href="overview.html">Overview</a></li>
                                     <li><a href="why-join.html">Why Join CIET?</a></li>
-                                    <li><a href="membership-grades.html">Membership Grades & Application Process</a></li>
+                                    <li><a href="membership-grades.html">Membership Grade</a></li>
                                     <li><a href="upgrade-framework.html">CIET Membership Upgrade Framework</a></li>
-                                    <li><a href="upgrade-framework.html">General Principle of Membership Upgrades</a></li>
                                     <li><a href="subscription.html">Annual Subscription</a></li>
                                     <li><a href="code-of-conduct.html">Code of Conduct</a></li>
                                     <li><a href="cpd.html">Continuous Professional Development</a></li>
@@ -1035,10 +1068,16 @@
                             </div>
                         </div>
                     </li>
+			<li><a href="examination.html">Examination Framework</a></li>	
+                    <li><a href="certifications.html">Professional Certifications</a></li>
+                    
+                    
+                   
 
-                    <li><a href="contact.html">Contact</a></li>
+                 
                 </ul>
             </nav>
+
 
             <button class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
         </div>
@@ -1062,7 +1101,7 @@
             <!-- INTRODUCTION -->
             <div class="content-intro fade-in">
                 <h2>CIET Professional Examination Framework</h2>
-                <p>The Chartered Institute of Engineering & Technology (CIET) is dedicated to advancing professional standards in education and training through a rigorous and internationally recognized Examination Framework. This framework is designed to ensure that education and training professionals acquire, demonstrate, and maintain high levels of knowledge, practical competence, ethical practice, and leadership capacity throughout their careers.</p>
+                <p>The Chartered Institute of Education & Training (CIET) is dedicated to advancing professional standards in education and training through a rigorous and internationally recognized Examination Framework. This framework is designed to ensure that education and training professionals acquire, demonstrate, and maintain high levels of knowledge, practical competence, ethical practice, and leadership capacity throughout their careers.</p>
             </div>
 
             <!-- FRAMEWORK OVERVIEW -->
@@ -1546,7 +1585,7 @@
             <div class="footer-grid">
                 <div class="footer-section">
                     <img src="assets/logos/ciet-logo.png" alt="CIET Logo" style="height: 50px; margin-bottom: 20px;">
-                    <p>Chartered Institute of Engineering & Technology (CIET) is a professional body dedicated to advancing excellence in engineering and technology professions worldwide.</p>
+                    <p>Chartered Institute of Education & Training (CIET) is a professional body committed to advancing teaching excellence worldwide.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61579484342789" aria-label="Facebook"><img src="assets/logos/facebook.png" alt="Facebook"></a>
                         <a href="https://x.com" aria-label="Twitter"><img src="assets/logos/twitter.jpg" alt="Twitter"></a>
@@ -1568,24 +1607,25 @@
                     <h3>Information</h3>
                     <ul>
                        <li><a href="subscription.html">Annual Subscription</a></li>
-                        <li><a href="https://certification@cietglobal.us">Application Portal</a></li>
-                        <li><a href="https://verifycertificate@cietglobal.us">Certificate Verification</a></li>
+                        <li><a href="mailto:certification@cietglobal.us">Application Portal</a></li>
+                        <li><a href="certificate-verification.html">Certificate Verification</a></li>
                         <li><a href="examination.html">Examination Framework</a></li>
                         <li><a href="membership-grades.html">Membership Fees</a></li>
+
 
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p>Professional House<br>
-                    Engineering District<br>
+                    Education District<br>
                     Global City, GC 12345</p>
                     <p><strong>Email:</strong> info@ciet.org<br>
                     <strong>Phone:</strong> +1 (555) 123-4567</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Chartered Institute of Engineering & Technology. All rights reserved. | <a href="privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.7);">Terms & Conditions</a></p>
+                <p>© 2026 Chartered Institute of Education & Training. All rights reserved. | <a href="privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.7);">Terms & Conditions</a></p>
             </div>
         </div>
     </footer>
@@ -1607,25 +1647,38 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // ===== MOBILE MENU =====
+        // ===== IMPROVED MOBILE MENU =====
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const mainNav = document.querySelector('.main-nav');
         const dropdowns = document.querySelectorAll('.has-dropdown');
 
         mobileToggle.addEventListener('click', function() {
             mainNav.classList.toggle('active');
+            // Close all dropdowns when closing menu
+            if (!mainNav.classList.contains('active')) {
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
         });
 
+        // Handle dropdown clicks on mobile - CLICK TO TOGGLE
         dropdowns.forEach(dropdown => {
             const link = dropdown.querySelector('a');
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                    // Toggle current dropdown
                     dropdown.classList.toggle('active');
                 }
             });
         });
 
+        // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.main-nav') && !e.target.closest('.mobile-menu-toggle')) {
                 mainNav.classList.remove('active');
