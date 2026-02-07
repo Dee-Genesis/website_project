@@ -346,44 +346,52 @@
             line-height: 1.6;
         }
 
-        /* ===== EXAMINATION LEVELS (USING FRAMEWORK STRUCTURE STYLE) ===== */
+        /* ===== EXAMINATION LEVELS (FIXED WITH CHECKMARKS) ===== */
         .levels-section {
             margin: 80px 0;
         }
 
         .level-card {
-            background: linear-gradient(135deg, rgba(202,165,71,0.08), rgba(202,165,71,0.03));
-            padding: 60px;
+            background: #fff;
             border-radius: 8px;
             margin-bottom: 40px;
-            border-left: 5px solid #caa547;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            overflow: hidden;
             transition: all 0.3s ease;
+            border-left: 6px solid #caa547;
         }
 
         .level-card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transform: translateX(5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
         }
 
         .level-header {
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
+            color: #fff;
+            padding: 35px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
         .level-number {
-            display: inline-block;
-            min-width: 60px;
-            height: 60px;
+            min-width: 80px;
+            height: 80px;
             background: #caa547;
             color: #2b2b2b;
             border-radius: 50%;
-            text-align: center;
-            line-height: 60px;
-            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
             font-weight: bold;
-            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(202,165,71,0.4);
+            flex-shrink: 0;
         }
 
         .level-title-group h3 {
-            color: #2b2b2b;
+            color: #fff;
             margin: 0 0 8px 0;
             font-size: 26px;
         }
@@ -396,16 +404,15 @@
         }
 
         .level-body {
-            margin-top: 30px;
+            padding: 40px;
         }
 
         .level-purpose {
-            background: #fff;
+            background: #f8f9fa;
             padding: 25px;
             border-radius: 6px;
             margin-bottom: 30px;
             border-left: 4px solid #caa547;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
         .level-purpose h4 {
@@ -429,10 +436,10 @@
         }
 
         .module-item {
-            background: #fff;
+            background: linear-gradient(135deg, rgba(202,165,71,0.05), rgba(202,165,71,0.02));
             padding: 20px;
             border-radius: 6px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-left: 3px solid #caa547;
             transition: all 0.3s ease;
             display: flex;
             align-items: flex-start;
@@ -440,8 +447,8 @@
         }
 
         .module-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(202,165,71,0.1), rgba(202,165,71,0.05));
         }
 
         .module-number {
@@ -466,16 +473,15 @@
         }
 
         .level-award {
-            background: #fff;
+            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
+            color: #fff;
             padding: 25px 30px;
             border-radius: 6px;
             margin-top: 30px;
-            border-left: 4px solid #caa547;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
         .level-award h4 {
-            color: #2b2b2b;
+            color: #caa547;
             margin: 0 0 10px 0;
             font-size: 18px;
         }
@@ -483,12 +489,8 @@
         .level-award p {
             margin: 0;
             font-size: 16px;
-            color: #555;
+            color: rgba(255,255,255,0.95);
             line-height: 1.7;
-        }
-
-        .level-award p strong {
-            color: #caa547;
         }
 
         /* ===== GUIDELINES SECTION ===== */
@@ -982,40 +984,81 @@
                 display: block;
             }
 
+            /* MOBILE PADDING FIXES */
+            .main-content {
+                padding: 50px 0;
+            }
+
+            .page-header {
+                padding: 80px 0 50px;
+            }
+
             .page-header h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .content-intro h2 {
-                font-size: 32px;
+                font-size: 28px;
+            }
+
+            .content-intro p {
+                font-size: 16px;
             }
 
             .framework-highlights {
                 grid-template-columns: 1fr;
             }
 
-            /* ===== MOBILE STYLES FOR EXAMINATION LEVELS ===== */
-            .level-card {
+            /* FRAMEWORK OVERVIEW MOBILE */
+            .framework-overview {
                 padding: 30px 20px;
+                margin-bottom: 50px;
+            }
+
+            /* ===== MOBILE STYLES FOR EXAMINATION LEVELS ===== */
+            .levels-section {
+                margin: 50px 0;
+            }
+
+            .level-card {
+                margin-bottom: 30px;
+            }
+
+            .level-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+                gap: 15px;
             }
 
             .level-number {
-                min-width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 24px;
+                min-width: 60px;
+                height: 60px;
+                font-size: 28px;
             }
 
             .level-title-group h3 {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             .level-subtitle {
                 font-size: 14px;
             }
 
+            .level-body {
+                padding: 25px 20px;
+            }
+
             .level-purpose {
                 padding: 20px 15px;
+            }
+
+            .level-purpose h4 {
+                font-size: 16px;
+            }
+
+            .level-purpose p {
+                font-size: 15px;
             }
 
             .modules-grid {
@@ -1035,30 +1078,96 @@
                 padding: 20px;
             }
 
+            .level-award h4 {
+                font-size: 16px;
+            }
+
+            .level-award p {
+                font-size: 15px;
+            }
+
+            .level-card:hover {
+                transform: none;
+            }
+
             /* End of mobile examination levels fix */
+
+            /* GUIDELINES AND ASSESSMENT MOBILE */
+            .guidelines-section {
+                padding: 50px 0;
+                margin: 50px 0;
+            }
 
             .guidelines-grid,
             .assessment-methods {
                 grid-template-columns: 1fr;
             }
 
+            .guideline-card,
+            .method-card {
+                padding: 25px 20px;
+            }
+
+            .assessment-section {
+                margin: 50px 0;
+            }
+
+            /* EXEMPTION SECTION MOBILE */
+            .exemption-section {
+                padding: 50px 0;
+                margin: 50px 0;
+            }
+
+            .exemption-types {
+                grid-template-columns: 1fr;
+            }
+
+            .exemption-card {
+                padding: 25px 20px;
+            }
+
+            /* DOWNLOAD AND CTA MOBILE */
+            .download-section {
+                padding: 40px 20px;
+                margin: 50px 0;
+            }
+
+            .download-section h3 {
+                font-size: 26px;
+            }
+
+            .download-section p {
+                font-size: 16px;
+            }
+
+            .cta-section {
+                padding: 50px 0;
+            }
+
+            .cta-section h2 {
+                font-size: 30px;
+            }
+
+            .cta-section p {
+                font-size: 16px;
+            }
+
+            /* FOOTER MOBILE */
             .footer-grid {
                 grid-template-columns: 1fr;
             }
 
-            /* Additional mobile optimizations */
-            .framework-overview {
-                padding: 30px 20px;
+            footer {
+                padding: 50px 0 0;
             }
 
-            .download-section {
-                padding: 40px 20px;
-            }
-
+            /* BUTTON MOBILE */
             .btn {
                 display: block;
                 margin: 10px auto;
                 max-width: 280px;
+                padding: 14px 30px;
+                font-size: 15px;
             }
         }
 
@@ -1093,22 +1202,13 @@
 
         /* ===== ANIMATIONS ===== */
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Force fade-in to be visible on mobile immediately */
-        @media (max-width: 768px) {
-            .fade-in {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
         }
     </style>
 </head>
