@@ -346,51 +346,44 @@
             line-height: 1.6;
         }
 
-        /* ===== EXAMINATION LEVELS ===== */
+        /* ===== EXAMINATION LEVELS (USING FRAMEWORK STRUCTURE STYLE) ===== */
         .levels-section {
             margin: 80px 0;
         }
 
         .level-card {
-            background: #fff;
+            background: linear-gradient(135deg, rgba(202,165,71,0.08), rgba(202,165,71,0.03));
+            padding: 60px;
             border-radius: 8px;
             margin-bottom: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            overflow: hidden;
+            border-left: 5px solid #caa547;
             transition: all 0.3s ease;
-            border-left: 6px solid #caa547;
         }
 
         .level-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
         .level-header {
-            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
-            color: #fff;
-            padding: 35px 40px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
+            margin-bottom: 30px;
         }
 
         .level-number {
-            min-width: 80px;
-            height: 80px;
+            display: inline-block;
+            min-width: 60px;
+            height: 60px;
             background: #caa547;
             color: #2b2b2b;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 28px;
             font-weight: bold;
-            box-shadow: 0 5px 20px rgba(202,165,71,0.4);
+            margin-bottom: 20px;
         }
 
         .level-title-group h3 {
-            color: #fff;
+            color: #2b2b2b;
             margin: 0 0 8px 0;
             font-size: 26px;
         }
@@ -403,15 +396,16 @@
         }
 
         .level-body {
-            padding: 40px;
+            margin-top: 30px;
         }
 
         .level-purpose {
-            background: #f8f9fa;
+            background: #fff;
             padding: 25px;
             border-radius: 6px;
             margin-bottom: 30px;
             border-left: 4px solid #caa547;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
         .level-purpose h4 {
@@ -435,48 +429,53 @@
         }
 
         .module-item {
-            background: linear-gradient(135deg, rgba(202,165,71,0.05), rgba(202,165,71,0.02));
+            background: #fff;
             padding: 20px;
             border-radius: 6px;
-            border-left: 3px solid #caa547;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
         }
 
         .module-item:hover {
-            transform: translateX(5px);
-            background: linear-gradient(135deg, rgba(202,165,71,0.1), rgba(202,165,71,0.05));
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
         .module-number {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: #2b2b2b;
+            min-width: 24px;
+            height: 24px;
+            flex-shrink: 0;
             color: #caa547;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
+            font-size: 20px;
             font-weight: bold;
-            font-size: 14px;
-            margin-right: 10px;
+        }
+
+        .module-number::before {
+            content: "✓";
         }
 
         .module-item span {
             font-size: 16px;
             color: #333;
             font-weight: 500;
+            flex: 1;
         }
 
         .level-award {
-            background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
-            color: #fff;
+            background: #fff;
             padding: 25px 30px;
             border-radius: 6px;
             margin-top: 30px;
+            border-left: 4px solid #caa547;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
         .level-award h4 {
-            color: #caa547;
+            color: #2b2b2b;
             margin: 0 0 10px 0;
             font-size: 18px;
         }
@@ -484,8 +483,12 @@
         .level-award p {
             margin: 0;
             font-size: 16px;
-            color: rgba(255,255,255,0.95);
+            color: #555;
             line-height: 1.7;
+        }
+
+        .level-award p strong {
+            color: #caa547;
         }
 
         /* ===== GUIDELINES SECTION ===== */
@@ -991,9 +994,48 @@
                 grid-template-columns: 1fr;
             }
 
+            /* ===== MOBILE STYLES FOR EXAMINATION LEVELS ===== */
+            .level-card {
+                padding: 30px 20px;
+            }
+
+            .level-number {
+                min-width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+            }
+
+            .level-title-group h3 {
+                font-size: 22px;
+            }
+
+            .level-subtitle {
+                font-size: 14px;
+            }
+
+            .level-purpose {
+                padding: 20px 15px;
+            }
+
             .modules-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
+
+            .module-item {
+                padding: 15px;
+            }
+
+            .module-item span {
+                font-size: 15px;
+            }
+
+            .level-award {
+                padding: 20px;
+            }
+
+            /* End of mobile examination levels fix */
 
             .guidelines-grid,
             .assessment-methods {
@@ -1002,6 +1044,50 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Additional mobile optimizations */
+            .framework-overview {
+                padding: 30px 20px;
+            }
+
+            .download-section {
+                padding: 40px 20px;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 280px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+            
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .content-intro h2 {
+                font-size: 26px;
+            }
+
+            .level-number {
+                min-width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .level-title-group h3 {
+                font-size: 18px;
+            }
+
+            .module-item span {
+                font-size: 14px;
             }
         }
 
@@ -1015,6 +1101,14 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Force fade-in to be visible on mobile immediately */
+        @media (max-width: 768px) {
+            .fade-in {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
         }
     </style>
 </head>
@@ -1155,23 +1249,23 @@
                         <h4>Modules</h4>
                         <div class="modules-grid">
                             <div class="module-item">
-                                <span class="module-number">1</span>
+                                <span class="module-number"></span>
                                 <span>Foundations of Education and Training</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">2</span>
+                                <span class="module-number"></span>
                                 <span>Learning Theories and Pedagogy</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">3</span>
+                                <span class="module-number"></span>
                                 <span>Professional Ethics and Conduct</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">4</span>
+                                <span class="module-number"></span>
                                 <span>Curriculum Design Basics</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">5</span>
+                                <span class="module-number"></span>
                                 <span>Assessment and Evaluation</span>
                             </div>
                         </div>
@@ -1201,23 +1295,23 @@
                         <h4>Modules</h4>
                         <div class="modules-grid">
                             <div class="module-item">
-                                <span class="module-number">1</span>
+                                <span class="module-number"></span>
                                 <span>Advanced Pedagogy and Learning Facilitation</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">2</span>
+                                <span class="module-number"></span>
                                 <span>Curriculum Development and Implementation</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">3</span>
+                                <span class="module-number"></span>
                                 <span>Assessment, Feedback, and Reporting</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">4</span>
+                                <span class="module-number"></span>
                                 <span>Professional Development Planning</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">5</span>
+                                <span class="module-number"></span>
                                 <span>Communication, Collaboration, and Leadership</span>
                             </div>
                         </div>
@@ -1247,23 +1341,23 @@
                         <h4>Modules</h4>
                         <div class="modules-grid">
                             <div class="module-item">
-                                <span class="module-number">1</span>
+                                <span class="module-number"></span>
                                 <span>Leadership in Education and Training</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">2</span>
+                                <span class="module-number"></span>
                                 <span>Research and Evidence-Based Practice</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">3</span>
+                                <span class="module-number"></span>
                                 <span>Advanced Curriculum and Program Design</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">4</span>
+                                <span class="module-number"></span>
                                 <span>Policy, Governance, and Quality Assurance</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">5</span>
+                                <span class="module-number"></span>
                                 <span>Innovation and Technology in Education</span>
                             </div>
                         </div>
@@ -1293,23 +1387,23 @@
                         <h4>Modules</h4>
                         <div class="modules-grid">
                             <div class="module-item">
-                                <span class="module-number">1</span>
+                                <span class="module-number"></span>
                                 <span>Strategic Leadership and Governance</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">2</span>
+                                <span class="module-number"></span>
                                 <span>Advanced Research and Scholarship</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">3</span>
+                                <span class="module-number"></span>
                                 <span>Global Trends in Education and Training</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">4</span>
+                                <span class="module-number"></span>
                                 <span>Mentorship and Professional Development Leadership</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">5</span>
+                                <span class="module-number"></span>
                                 <span>Education Policy and Advocacy</span>
                             </div>
                         </div>
@@ -1339,23 +1433,23 @@
                         <h4>Modules</h4>
                         <div class="modules-grid">
                             <div class="module-item">
-                                <span class="module-number">1</span>
+                                <span class="module-number"></span>
                                 <span>Visionary Leadership in Education</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">2</span>
+                                <span class="module-number"></span>
                                 <span>Transformational Research and Innovation</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">3</span>
+                                <span class="module-number"></span>
                                 <span>International Education Standards and Benchmarking</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">4</span>
+                                <span class="module-number"></span>
                                 <span>Sector-Wide Mentorship and Capacity Building</span>
                             </div>
                             <div class="module-item">
-                                <span class="module-number">5</span>
+                                <span class="module-number"></span>
                                 <span>Policy Influence and Societal Impact</span>
                             </div>
                         </div>
@@ -1607,7 +1701,7 @@
                     <h3>Information</h3>
                     <ul>
                        <li><a href="subscription.html">Annual Subscription</a></li>
-                        <li><a href="mailto:certification@cietglobal.us">Application Portal</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#c9aaacbbbda0afa0aaa8bda0a6a789aaa0acbdaea5a6aba8a5e7bcba">Application Portal</a></li>
                         <li><a href="certificate-verification.html">Certificate Verification</a></li>
                         <li><a href="examination.html">Examination Framework</a></li>
                         <li><a href="membership-grades.html">Membership Fees</a></li>
@@ -1620,7 +1714,7 @@
                     <p>Professional House<br>
                     Education District<br>
                     Global City, GC 12345</p>
-                    <p><strong>Email:</strong> info@ciet.org<br>
+                    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="10797e767f50737975643e7f6277">[email&#160;protected]</a><br>
                     <strong>Phone:</strong> +1 (555) 123-4567</p>
                 </div>
             </div>
@@ -1630,7 +1724,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // ===== SCROLL ANIMATIONS =====
         const observerOptions = {
             threshold: 0.1,
@@ -1689,13 +1783,4 @@
         // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                e.preventDefault(
