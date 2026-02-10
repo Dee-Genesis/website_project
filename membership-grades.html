@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="assets/logos/ciet-logo.png">
     
     <style>
-        /* ===== RESET & BASE ===== */
+    /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -71,14 +71,15 @@
             transition: all 0.3s ease;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER - WHITE DESIGN ===== */
         .site-header {
-            background: #1a1a1a;
-            color: #fff;
+            background: #ffffff;
+            color: #1a1a1a;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-bottom: 3px solid #caa547;
         }
 
         .header-flex {
@@ -95,18 +96,19 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 70px;
             width: auto;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
         }
 
         .logo a {
             font-size: 24px;
             font-weight: bold;
-            color: #fff;
+            color: #1a1a1a;
             letter-spacing: 0.5px;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* ===== NAVIGATION - WHITE HEADER STYLE ===== */
         .main-nav {
             position: relative;
         }
@@ -125,8 +127,8 @@
         }
 
         .main-nav > ul > li > a {
-            color: #fff;
-            font-weight: 500;
+            color: #1a1a1a;
+            font-weight: 600;
             padding: 30px 20px;
             display: block;
             font-size: 15px;
@@ -135,7 +137,14 @@
         }
 
         .main-nav > ul > li > a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(202,165,71,0.1);
+            color: #c8461a;
+        }
+
+        .main-nav > ul > li > a.active {
+            background: rgba(202,165,71,0.15);
+            color: #c8461a;
+            border-bottom: 3px solid #c8461a;
         }
 
         .has-dropdown > a::after {
@@ -147,8 +156,12 @@
             vertical-align: middle;
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
-            border-top: 4px solid #fff;
+            border-top: 4px solid #1a1a1a;
             transition: transform 0.3s ease;
+        }
+
+        .has-dropdown:hover > a::after {
+            border-top-color: #c8461a;
         }
 
         .mega-menu {
@@ -163,7 +176,7 @@
             transform: translateY(20px);
             transition: all 0.4s ease;
             z-index: 999;
-            border-top: 3px solid #caa547;
+            border-top: 3px solid #c8461a;
         }
 
         .has-dropdown:hover .mega-menu {
@@ -204,9 +217,15 @@
 
         .mega-menu-links a:hover {
             background: #f8f9fa;
-            color: #caa547;
-            border-left-color: #caa547;
+            color: #c8461a;
+            border-left-color: #c8461a;
             padding-left: 35px;
+        }
+
+        .mega-menu-links a.active {
+            background: #f8f9fa;
+            color: #c8461a;
+            border-left-color: #c8461a;
         }
 
         .mega-menu-image {
@@ -226,7 +245,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 28px;
             cursor: pointer;
         }
@@ -560,18 +579,18 @@
         }
 
         @media (max-width: 768px) {
-            /* ===== IMPROVED MOBILE TOGGLE MENU ===== */
+            /* ===== IMPROVED MOBILE TOGGLE MENU - WHITE HEADER ===== */
             .main-nav {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #1a1a1a;
+                background: #ffffff;
                 max-height: 80vh;
                 overflow-y: auto;
                 overflow-x: hidden;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
                 -webkit-overflow-scrolling: touch;
             }
 
@@ -585,8 +604,8 @@
 
             .main-nav > ul > li > a {
                 padding: 15px 5%;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-                color: #ffffff;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                color: #1a1a1a;
             }
 
             /* Dropdown menus inside mobile toggle */
@@ -596,31 +615,42 @@
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                background: #2b2b2b;
+                background: #f8f9fa;
                 display: none;
                 border-top: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
             }
 
             .has-dropdown.active .mega-menu {
                 display: block;
+                max-height: 500px;
             }
 
             /* IMPROVED TEXT VISIBILITY IN DROPDOWN */
             .mega-menu-links a {
                 padding: 12px 8%;
-                color: #f0f0f0;
+                color: #1a1a1a;
                 font-weight: 500;
                 border-left: 3px solid transparent;
             }
 
             .mega-menu-links a:hover {
-                background: #3a3a3a;
-                color: #caa547;
-                border-left-color: #caa547;
+                background: rgba(202, 165, 71, 0.2);
+                color: #c8461a;
+                border-left-color: #c8461a;
+                padding-left: calc(8% + 5px);
             }
 
             .has-dropdown > a::after {
                 float: right;
+                border-top-color: #1a1a1a;
+                transition: transform 0.3s ease;
+            }
+
+            .has-dropdown.active > a::after {
+                transform: rotate(180deg);
             }
 
             .mobile-menu-toggle {
@@ -643,6 +673,10 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .logo img {
+                height: 55px;
             }
         }
     </style>
@@ -673,6 +707,9 @@
                                     <li><a href="core-values.html">Core Values</a></li>
                                     <li><a href="strategic-focus.html">Strategic Focus</a></li>
                                     <li><a href="impact-goals.html">Impact Goals</a></li>
+				    <li><a href="cm.html">Council Members</a></li>
+				    <li><a href="cd.html">Country Directors</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -747,24 +784,40 @@
                     <div class="grade-section">
                         <h4>Eligibility</h4>
                         <ul>
-                            <li>Currently enrolled in a recognized diploma, undergraduate, or postgraduate program in education, training, or related fields.</li>
+                            <li>Enrollment in a recognized institution pursuing:
+                                <ul style="margin-top: 10px; padding-left: 30px;">
+                                    <li>Associate's degree in Education or Teacher Preparation Program.</li>
+                                    <li>Bachelor's degree in Education (Elementary, Secondary, Special Education, Early Childhood).</li>
+                                    <li>Post-baccalaureate teacher certification program.</li>
+                                </ul>
+                            </li>
+                            <li>Proof of enrollment required (official transcript or registrar's letter).</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
-                        <h4>Professional Experience</h4>
+                        <h4>Requirements</h4>
                         <ul>
-                            <li>No prior professional experience required.</li>
+                            <li>Commitment to CIET's Code of Ethics and Professional Conduct.</li>
+                            <li>Participation in at least one CIET-approved professional development activity annually.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Professional Standing</h4>
+                        <ul>
+                            <li>Recognized as an aspiring educator preparing for entry into the teaching or training profession.</li>
+                            <li>Provides a formal bridge between academic study and professional practice.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Benefits</h4>
                         <ul>
-                            <li>Access to workshops, seminars, and learning resources.</li>
-                            <li>Mentorship from experienced professionals.</li>
-                            <li>Participation in networking events and student-focused forums.</li>
-                            <li>Exposure to professional development, ethical standards, and career pathways.</li>
+                            <li>Access to CIET journals, research publications, and online learning resources.</li>
+                            <li>Discounted rates for conferences, seminars, and workshops.</li>
+                            <li>Participation in student forums and networking events.</li>
+                            <li>Eligibility for mentorship programs with experienced CIET members.</li>
                         </ul>
                     </div>
 
@@ -784,7 +837,7 @@
 
                     <div class="grade-section">
                         <div class="cpd-highlight">
-                            <strong>CPD Requirement:</strong> Minimum 10 hours per year through workshops, mentorship, or approved learning activities.
+                            <strong>Required CPD:</strong> 10 CPD hours annually. Focus on introductory professional development: classroom management, ethics, and foundational pedagogy. Activities may include workshops, webinars, and supervised teaching practice.
                         </div>
                     </div>
                 </div>
@@ -799,32 +852,52 @@
                 <div class="grade-body">
                     <div class="grade-section">
                         <h4>Eligibility</h4>
-                        <ul>
-                            <li>Professionals with foundational qualifications and some professional experience.</li>
-                        </ul>
+                        <p>To qualify as an Associate Member, candidates must demonstrate foundational academic achievement and early professional practice:</p>
                     </div>
 
                     <div class="grade-section">
-                        <h4>Academic Qualification</h4>
+                        <h4>Academic Qualifications</h4>
                         <ul>
-                            <li>Bachelor's degree in education, training, or related fields.</li>
+                            <li>A Bachelor's degree in Education or a related discipline (Elementary Education, Secondary Education, Special Education, Early Childhood Education, Instructional Design, or Human Resource Development) from an accredited institution.</li>
+                            <li>Alternatively, a Bachelor's degree in another discipline combined with a recognized teacher preparation program or post-baccalaureate certification in education/training.</li>
+                            <li>Completion of CIET's Diploma in Education and Training may also satisfy the academic requirement.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Professional Experience</h4>
                         <ul>
-                            <li>At least 3 years of teaching, training, or education-related experience.</li>
+                            <li>Minimum of three years of professional practice in teaching, instructional support, training delivery, or educational administration.</li>
+                            <li>Demonstrated competence in classroom instruction, training facilitation, or curriculum support.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Requirements</h4>
+                        <ul>
+                            <li>Submission of official academic transcripts and at least two professional references.</li>
+                            <li>Evidence of practical engagement in education/training (lesson plans, training modules, or instructional materials).</li>
+                            <li>Commitment to CIET's Code of Ethics and Professional Conduct.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Professional Standing</h4>
+                        <ul>
+                            <li>Recognized as an emerging professional with foundational experience in education and training.</li>
+                            <li>Establishes credibility and signals commitment to ongoing professional growth.</li>
+                            <li>Serves as the bridge between entry-level practice and full professional membership.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Benefits</h4>
                         <ul>
-                            <li>Access to advanced professional development programs, certification courses, and resources.</li>
-                            <li>Networking with peers and senior professionals.</li>
-                            <li>Participation in CIET-led projects, initiatives, and committees.</li>
-                            <li>Recognition as a qualified professional in the sector.</li>
+                            <li>Use of post-nominal letters ACIET.</li>
+                            <li>Access to structured CPD programs and professional development pathways.</li>
+                            <li>Eligibility to serve on CIET committees, working groups, and advisory panels.</li>
+                            <li>Enhanced career recognition and employability within the education and training sector.</li>
+                            <li>Networking opportunities with peers and senior professionals.</li>
                         </ul>
                     </div>
 
@@ -844,7 +917,7 @@
 
                     <div class="grade-section">
                         <div class="cpd-highlight">
-                            <strong>CPD Requirement:</strong> Minimum 20 hours per year through workshops, seminars, research, mentoring, or CIET projects.
+                            <strong>Required CPD:</strong> 20 CPD hours annually. At least 10 hours structured learning (seminars, accredited workshops, certification courses). Remaining hours may be self-directed (online modules, professional reading, reflective practice). CPD emphasis on curriculum design, instructional strategies, classroom management, and assessment methods. Documentation of CPD activities must be submitted annually to maintain active membership status.
                         </div>
                     </div>
                 </div>
@@ -859,33 +932,54 @@
                 <div class="grade-body">
                     <div class="grade-section">
                         <h4>Eligibility</h4>
-                        <ul>
-                            <li>Professionals demonstrating high competence, ethical practice, and contribution to education or training.</li>
-                        </ul>
+                        <p>To qualify as a Full Member, candidates must demonstrate advanced academic achievement and established professional practice:</p>
                     </div>
 
                     <div class="grade-section">
-                        <h4>Academic Qualification</h4>
+                        <h4>Academic Qualifications</h4>
                         <ul>
-                            <li>Minimum Bachelor's degree; Master's or higher preferred.</li>
+                            <li>A Master's degree in Education, Curriculum & Instruction, Educational Leadership, Training & Development, or a related discipline from an accredited institution.</li>
+                            <li>Alternatively, a Master's degree in another discipline combined with a recognized teacher preparation program, instructional design certification, or equivalent professional credential in education/training.</li>
+                            <li>Candidates with a Doctoral degree (Ed.D or Ph.D) in Education or related fields may also qualify directly, provided they meet the professional experience requirement.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Professional Experience</h4>
                         <ul>
-                            <li>At least 8 years in education, training, or educational management roles.</li>
+                            <li>Minimum of Seven years of professional experience in teaching, training, curriculum development, instructional design, or educational leadership.</li>
+                            <li>Demonstrated competence in instructional practice, curriculum innovation, assessment strategies, or policy implementation.</li>
+                            <li>Evidence of contributions to institutional improvement, professional development initiatives, or educational research.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Requirements</h4>
+                        <ul>
+                            <li>Submission of academic transcripts and a professional portfolio (lesson plans, training modules, curriculum frameworks, or published work).</li>
+                            <li>CPD records demonstrating ongoing professional development.</li>
+                            <li>References from senior colleagues, supervisors, or recognized educational leaders.</li>
+                            <li>Commitment to CIET's Code of Ethics and Professional Conduct.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Professional Standing</h4>
+                        <ul>
+                            <li>Recognized as a competent and established practitioner in the education and training profession.</li>
+                            <li>Holds full professional membership status within CIET.</li>
+                            <li>Eligible to influence professional standards, contribute to policy discussions, and mentor junior members.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Benefits</h4>
                         <ul>
-                            <li>Full access to CIET's professional development programs, research, and resources.</li>
-                            <li>Eligibility to serve on committees, advisory boards, and strategic initiatives.</li>
-                            <li>Recognition in CIET directories and publications.</li>
-                            <li>Opportunities to mentor junior members.</li>
-                            <li>Priority access to leadership and career advancement programs.</li>
+                            <li>Use of post-nominal letters MCIET.</li>
+                            <li>Full voting rights within CIET governance structures.</li>
+                            <li>Eligibility for leadership roles, committee service, and advisory positions.</li>
+                            <li>Access to advanced CPD programs, collaborative research opportunities, and professional networks.</li>
+                            <li>Recognition as a professional capable of shaping educational practice and policy.</li>
                         </ul>
                     </div>
 
@@ -905,7 +999,7 @@
 
                     <div class="grade-section">
                         <div class="cpd-highlight">
-                            <strong>CPD Requirement:</strong> Minimum 30 hours per year, including workshops, seminars, online courses, research, publications, mentoring, and participation in CIET initiatives.
+                            <strong>Required CPD:</strong> 30 CPD hours annually. At least 15 hours structured learning (graduate-level courses, accredited workshops, leadership training, or advanced certification programs). Remaining hours may include research, mentoring, professional writing, or conference participation. CPD emphasis on leadership development, advanced pedagogy, curriculum innovation, and policy engagement. Annual submission of CPD documentation is required to maintain active membership status.
                         </div>
                     </div>
                 </div>
@@ -920,33 +1014,62 @@
                 <div class="grade-body">
                     <div class="grade-section">
                         <h4>Eligibility</h4>
-                        <ul>
-                            <li>Senior professionals with outstanding contributions and leadership experience.</li>
-                        </ul>
+                        <p>To be considered for Fellowship, candidates must demonstrate both academic achievement and professional distinction:</p>
                     </div>
 
                     <div class="grade-section">
-                        <h4>Academic Qualification</h4>
+                        <h4>Academic Qualifications</h4>
                         <ul>
-                            <li>Advanced degree (Master's or PhD) in education, training, or related fields.</li>
+                            <li>A Doctoral degree (Ed.D or Ph.D) in Education, Curriculum & Instruction, Educational Leadership, Training & Development, or a closely related discipline from an accredited institution.</li>
+                            <li>Alternatively, a Master's degree in Education or related field combined with exceptional professional contributions (e.g., published works, leadership roles, policy influence) may be considered.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Professional Experience</h4>
                         <ul>
-                            <li>Minimum of 15 years of distinguished experience in leadership, policy, research, or educational management.</li>
+                            <li>Minimum of 15 years of senior-level professional experience in education, training, or educational leadership.</li>
+                            <li>Evidence of holding significant leadership positions such as Principal, Superintendent, Dean, Director of Training, or Senior Policy Advisor.</li>
+                            <li>Demonstrated impact on educational practice, standards, or reform at district, state, national, or international level.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Contributions to the Profession</h4>
+                        <ul>
+                            <li>Publications in peer-reviewed journals, books, or recognized educational texts.</li>
+                            <li>Development of innovative pedagogical models, curriculum frameworks, or training methodologies.</li>
+                            <li>Influence on educational policy, accreditation standards, or professional practice guidelines.</li>
+                            <li>Recognition through awards, honors, or invitations to keynote at national/international conferences.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Requirements</h4>
+                        <ul>
+                            <li>Submission of a portfolio of achievements, including academic credentials, leadership initiatives, publications, and evidence of innovation.</li>
+                            <li>Peer review and endorsement by existing Fellows or senior professionals within CIET.</li>
+                            <li>Demonstrated commitment to advancing the profession through mentorship, advocacy, and thought leadership.</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-section">
+                        <h4>Professional Standing</h4>
+                        <ul>
+                            <li>Fellowship represents the highest level of professional recognition within CIET.</li>
+                            <li>Fellows are regarded as thought leaders, innovators, and ambassadors for the education and training profession.</li>
+                            <li>They embody excellence in both academic scholarship and professional practice.</li>
                         </ul>
                     </div>
 
                     <div class="grade-section">
                         <h4>Benefits</h4>
                         <ul>
-                            <li>Recognition as a global leader in education and training.</li>
-                            <li>Exclusive opportunities for policy advocacy, advisory roles, and thought leadership.</li>
-                            <li>Priority access to strategic partnerships, research collaborations, and international initiatives.</li>
-                            <li>Eligibility to mentor members across all grades and participate in governance.</li>
-                            <li>Contribution to CIET publications, conferences, and global projects.</li>
+                            <li>Use of post-nominal letters FCIET.</li>
+                            <li>Eligibility for honorary roles, advisory boards, and leadership positions within CIET.</li>
+                            <li>Influence in shaping educational policy, accreditation standards, and global best practices.</li>
+                            <li>Prestige and credibility across the international education and training community.</li>
+                            <li>Opportunities to mentor emerging professionals and contribute to CIET's strategic direction.</li>
                         </ul>
                     </div>
 
@@ -966,7 +1089,7 @@
 
                     <div class="grade-section">
                         <div class="cpd-highlight">
-                            <strong>CPD Requirement:</strong> Minimum 40 hours per year, including leadership programs, policy projects, research, publications, mentoring, and international collaboration activities.
+                            <strong>Required CPD:</strong> 40 CPD hours annually. At least 20 hours structured learning (executive leadership programs, advanced research seminars, keynote presentations, doctoral-level workshops). Remaining hours may include publishing, policy development, international collaboration, or mentoring. CPD emphasis on innovation, global leadership, and thought leadership in education and training.
                         </div>
                     </div>
                 </div>
@@ -1002,7 +1125,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="institue-overview.html">About Us</a></li>
                         <li><a href="certifications.html">Certifications</a></li>
                         <li><a href="examination.html">Examination</a></li>
                         <li><a href="membership.html">Membership</a></li>
@@ -1022,11 +1145,14 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Professional House<br>
-                    Education District<br>
-                    Global City, GC 12345</p>
-                    <p><strong>Email:</strong> info@ciet.org<br>
-                    <strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p>Chartered Institute of Education and Training (CIET)
+
+<br>
+                    1001 Bishop Street, Suite 2685A  <br>
+                   Honolulu, Hawaii 96813, USA</p>
+                    <p><strong>Email:</strong> info@cietglobal.us<br>
+                    <strong>Phone:</strong> +1 (480) 955-0876</p>
+
                 </div>
             </div>
             <div class="footer-bottom">

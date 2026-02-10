@@ -61,12 +61,13 @@
 
         /* ===== HEADER ===== */
         .site-header {
-            background: #1a1a1a;
-            color: #fff;
+            background: #ffffff;
+            color: #1a1a1a;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
         }
 
         .header-flex {
@@ -113,7 +114,7 @@
         }
 
         .main-nav > ul > li > a {
-            color: #fff;
+            color: #1a1a1a;
             font-weight: 500;
             padding: 30px 20px;
             display: block;
@@ -123,7 +124,8 @@
         }
 
         .main-nav > ul > li > a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(202,165,71,0.1);
+            color: #caa547;
         }
 
         /* Dropdown indicator */
@@ -136,7 +138,7 @@
             vertical-align: middle;
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
-            border-top: 4px solid #fff;
+            border-top: 4px solid #1a1a1a;
             transition: transform 0.3s ease;
         }
 
@@ -219,7 +221,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 28px;
             cursor: pointer;
         }
@@ -302,6 +304,11 @@
             height: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .hero-slider:hover .slider-nav {
+            opacity: 1;
         }
 
         .slider-nav:hover {
@@ -789,11 +796,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #1a1a1a;
+                background: #ffffff;
                 max-height: 70vh;
                 overflow-y: auto;
                 overflow-x: hidden;
                 -webkit-overflow-scrolling: touch;
+                border-top: 1px solid rgba(0,0,0,0.08);
             }
 
             .main-nav.active {
@@ -806,8 +814,8 @@
 
             .main-nav > ul > li > a {
                 padding: 15px 5%;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-                color: #fff;
+                border-bottom: 1px solid rgba(0,0,0,0.08);
+                color: #1a1a1a;
             }
 
             .mega-menu {
@@ -816,7 +824,7 @@
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                background: rgba(255,255,255,0.05);
+                background: rgba(202,165,71,0.05);
                 display: none;
                 border-top: none;
             }
@@ -835,12 +843,12 @@
 
             .mega-menu-links a {
                 padding: 12px 8%;
-                color: #f0f0f0;
+                color: #333;
                 font-size: 14px;
             }
 
             .mega-menu-links a:hover {
-                background: rgba(202,165,71,0.2);
+                background: rgba(202,165,71,0.15);
                 color: #caa547;
             }
 
@@ -921,7 +929,9 @@
                                     <li><a href="objectives.html">Objectives</a></li>
                                     <li><a href="core-values.html">Core Values</a></li>
                                     <li><a href="strategic-focus.html">Strategic Focus</a></li>
-                                    <li><a href="impact-goals.html">Impact Goals</a></li>
+                                    <li><a href="cm.html">Council Members</a></li>
+				    <li><a href="cd.html">Country Directors</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -1032,17 +1042,17 @@
                 <div class="feature-card fade-in">
                     <img src="assets/icons/certificate.svg" alt="Career Advancement">
                     <h3>Career Advancement</h3>
-                    <p>We contribute not only to the growth of individual careers but also to the transformation of education systems and communities across the globe.</p>
+                    <p>We foster dual impact: empowering individual career progression while transforming education ecosystems and communities across the globe.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <img src="assets/icons/examination.svg" alt="Standard Syllabus">
                     <h3>Standard Syllabus</h3>
-                    <p>We develop frameworks and guidelines that ensure our members consistently deliver accurate, relevant, and reliable educational insights.</p>
+                    <p>Our standardized frameworks ensure members consistently deliver accurate, relevant, and evidence-based educational expertise.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <img src="assets/icons/verification.svg" alt="Global Certificate">
                     <h3>Global Certificate</h3>
-                    <p>The Certificate Verification Guidelines allow employers, institutions, and individuals to authenticate any certificate awarded by CIET.</p>
+                    <p>Our verification framework enables employers, institutions, and individuals to authenticate all CIET-issued certificates with confidence.</p>
                 </div>
             </div>
         </div>
@@ -1052,8 +1062,7 @@
     <section class="mission-section">
         <div class="container">
             <h2>Our Mission</h2>
-            <p>To advance professional competence through rigorous certification and assessment, promoting ethical practice and professional integrity across all education disciplines.</p>
-            <p>We foster continuous learning, build a global community of professionals, and contribute to the advancement of educational knowledge and practice worldwide.</p>
+            <p>We advance professional competence in education through rigorous credentialing and assessment frameworks that uphold the highest standards of ethical practice and professional integrity. By fostering continuous professional development, building an interconnected global community, and contributing to scholarly and practical advancement in the field, we drive sustainable excellence across all educational disciplines worldwide.</p>
         </div>
     </section>
 
@@ -1062,7 +1071,7 @@
         <div class="dual-section">
             <div class="dual-content fade-in">
                 <h3>Diverse Community</h3>
-                <p>We provide access to a global community of experts, professional development programs, certifications, research resources, networking opportunities, and governance participation.</p>
+                <p>Membership unlocks a global professional community, featuring expert collaboration, credentialing programs, research archives, peer networking, and opportunities to shape organizational direction.</p>
             </div>
             <div class="dual-image">
                 <img src="assets/images/about-us/team-photos/Team photos.jpg" alt="Diverse Community">
@@ -1072,7 +1081,7 @@
         <div class="dual-section">
             <div class="dual-content fade-in">
                 <h3>Partnership</h3>
-                <p>We partner with universities, corporations, and regulatory bodies to develop frameworks that align with global standards while reflecting the dynamic needs of modern educational institutions.</p>
+                <p>We engage multi-sector stakeholders—including academic institutions, corporate entities, and regulatory agencies—to establish frameworks that maintain global standards alignment while addressing the complex, evolving needs of today's educational landscape.</p>
             </div>
             <div class="dual-image">
                 <img src="assets/images/membership/networking-event.jpg" alt="Partnership">
@@ -1088,7 +1097,7 @@
                     <h2>Explore Programs</h2>
                     <p>Whether you're a teacher, trainer, or educational leader, discover the specialized professional track that fits your career goals.</p>
                     <div class="cta-buttons">
-                        <a href="membership.html" class="btn btn-white">Become a Member</a>
+                        <a href="membership-grades.html" class="btn btn-white">Become a Member</a>
                         <a href="certifications.html" class="btn">Get Certified</a>
                     </div>
                 </div>
@@ -1107,18 +1116,18 @@
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial active">
-                    <p class="testimonial-quote">"The CIET certification was the bridge I needed to transition from general teaching into specialized educational leadership. The curriculum's focus is incredibly practical, and the emphasis on professional standards ensured I could deliver immediate value to my institution."</p>
-                    <p class="testimonial-author">Sarah O.</p>
+                    <p class="testimonial-quote">"This certification facilitated my professional evolution from teaching practitioner to educational leadership specialist. The curriculum's practitioner-focused methodology, combined with its commitment to industry standards, equipped me to contribute strategically and immediately to organizational objectives."</p>
+                    <p class="testimonial-author">Lily Smith</p>
                     <p class="testimonial-role">Chartered Educator</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-quote">"CIET provided me with a world-class framework for professional education. Since completing the program, I've been able to improve the quality of our teaching workflows. The Chartered status has given me a competitive edge."</p>
-                    <p class="testimonial-author">Monica Jackson</p>
+                    <p class="testimonial-quote">"The program offered exceptional, internationally aligned frameworks for educational practice. Implementation of these methodologies has yielded measurable improvements in our teaching quality and institutional processes. My Chartered status has established clear professional distinction in the marketplace."</p>
+                    <p class="testimonial-author">Augustina Coleman</p>
                     <p class="testimonial-role">Professional Member</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-quote">"What I appreciated most about the CIET program was the balance between theory and practical application. The structured modules allowed me to transform complex educational challenges into clear, actionable solutions for my team."</p>
-                    <p class="testimonial-author">Adewusi Eniola</p>
+                    <p class="testimonial-quote">"WWhat distinguished the CIET program was its effective synthesis of conceptual rigor and practical application. The modular structure provided systematic tools for deconstructing intricate educational challenges and developing clear, evidence-based solutions for organizational implementation."</p>
+                    <p class="testimonial-author">Akinola Janet</p>
                     <p class="testimonial-role">Education Specialist</p>
                 </div>
             </div>
@@ -1137,9 +1146,8 @@
                         <img src="assets/images/homepage/hero-banner.jpg" alt="News 1">
                     </div>
                     <div class="news-content">
-                        <p class="news-date">February 2, 2026</p>
-                        <h3>Annual Education Conference 2026</h3>
-                        <p>Join us for the biggest gathering of education professionals this year.</p>
+                        <h3>Annual Education Conference </h3>
+                        <p>Connect with the global education community at this year's flagship professional assembly.</p>
                         <a href="membership.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -1148,9 +1156,9 @@
                         <img src="assets/images/about-us/facilities.jpg" alt="News 2">
                     </div>
                     <div class="news-content">
-                        <p class="news-date">January 28, 2026</p>
+                  
                         <h3>New Certification Program Launch</h3>
-                        <p>Introducing our latest advanced certification in innovative teaching methodologies.</p>
+                        <p>Presenting our latest advanced-level certification: a rigorous program in innovative pedagogical methodologies for educational leaders.</p>
                         <a href="certifications.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -1159,9 +1167,9 @@
                         <img src="assets/images/membership/member-benefits.png" alt="News 3">
                     </div>
                     <div class="news-content">
-                        <p class="news-date">January 15, 2026</p>
+                        
                         <h3>Member Success Stories</h3>
-                        <p>Discover how our members are making an impact in education worldwide.</p>
+                        <p>"See how our members are shaping the future of education in communities around the world.</p>
                         <a href="impact-goals.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -1186,7 +1194,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="institute-overview.html">About Us</a></li>
                         <li><a href="certifications.html">Certifications</a></li>
                         <li><a href="examination.html">Examination</a></li>
                         <li><a href="membership.html">Membership</a></li>
@@ -1206,11 +1214,13 @@
 
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Professional House<br>
-                    Education District<br>
-                    Global City, GC 12345</p>
-                    <p><strong>Email:</strong> info@ciet.org<br>
-                    <strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p>Chartered Institute of Education and Training (CIET)
+
+<br>
+                    1001 Bishop Street, Suite 2685A  <br>
+                   Honolulu, Hawaii 96813, USA</p>
+                    <p><strong>Email:</strong> info@cietglobal.us<br>
+                    <strong>Phone:</strong> +1 (480) 955-0876</p>
                 </div>
             </div>
             <div class="footer-bottom">

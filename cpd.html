@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="assets/logos/ciet-logo.png">
     
     <style>
-        /* ===== RESET & BASE ===== */
+     /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -71,14 +71,15 @@
             transition: all 0.3s ease;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER - WHITE DESIGN ===== */
         .site-header {
-            background: #1a1a1a;
-            color: #fff;
+            background: #ffffff;
+            color: #1a1a1a;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-bottom: 3px solid #caa547;
         }
 
         .header-flex {
@@ -95,18 +96,19 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 70px;
             width: auto;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
         }
 
         .logo a {
             font-size: 24px;
             font-weight: bold;
-            color: #fff;
+            color: #1a1a1a;
             letter-spacing: 0.5px;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* ===== NAVIGATION - WHITE HEADER STYLE ===== */
         .main-nav {
             position: relative;
         }
@@ -125,8 +127,8 @@
         }
 
         .main-nav > ul > li > a {
-            color: #fff;
-            font-weight: 500;
+            color: #1a1a1a;
+            font-weight: 600;
             padding: 30px 20px;
             display: block;
             font-size: 15px;
@@ -135,7 +137,14 @@
         }
 
         .main-nav > ul > li > a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(202,165,71,0.1);
+            color: #c8461a;
+        }
+
+        .main-nav > ul > li > a.active {
+            background: rgba(202,165,71,0.15);
+            color: #c8461a;
+            border-bottom: 3px solid #c8461a;
         }
 
         .has-dropdown > a::after {
@@ -147,8 +156,12 @@
             vertical-align: middle;
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
-            border-top: 4px solid #fff;
+            border-top: 4px solid #1a1a1a;
             transition: transform 0.3s ease;
+        }
+
+        .has-dropdown:hover > a::after {
+            border-top-color: #c8461a;
         }
 
         .mega-menu {
@@ -163,7 +176,7 @@
             transform: translateY(20px);
             transition: all 0.4s ease;
             z-index: 999;
-            border-top: 3px solid #caa547;
+            border-top: 3px solid #c8461a;
         }
 
         .has-dropdown:hover .mega-menu {
@@ -204,9 +217,15 @@
 
         .mega-menu-links a:hover {
             background: #f8f9fa;
-            color: #caa547;
-            border-left-color: #caa547;
+            color: #c8461a;
+            border-left-color: #c8461a;
             padding-left: 35px;
+        }
+
+        .mega-menu-links a.active {
+            background: #f8f9fa;
+            color: #c8461a;
+            border-left-color: #c8461a;
         }
 
         .mega-menu-image {
@@ -226,7 +245,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 28px;
             cursor: pointer;
         }
@@ -766,16 +785,17 @@
         }
 
         @media (max-width: 768px) {
-            /* ===== IMPROVED MOBILE MENU STYLES ===== */
+            /* ===== IMPROVED MOBILE MENU STYLES - WHITE HEADER ===== */
             .main-nav {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #2d2d2d;
+                background: #ffffff;
                 max-height: calc(100vh - 100px);
                 overflow-y: auto;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
                 -webkit-overflow-scrolling: touch;
             }
 
@@ -789,14 +809,14 @@
 
             .main-nav > ul > li > a {
                 padding: 15px 5%;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-                color: #ffffff;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                color: #1a1a1a;
                 font-size: 16px;
             }
 
             /* Dropdown arrow color improved */
             .has-dropdown > a::after {
-                border-top-color: #caa547;
+                border-top-color: #1a1a1a;
                 float: right;
                 margin-top: 5px;
             }
@@ -812,7 +832,7 @@
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                background: #3d3d3d;
+                background: #f8f9fa;
                 display: none;
                 border-top: none;
                 max-height: 0;
@@ -828,15 +848,16 @@
             /* Improved dropdown link visibility */
             .mega-menu-links a {
                 padding: 12px 8%;
-                color: #f0f0f0;
+                color: #1a1a1a;
                 font-size: 15px;
                 border-left: 3px solid transparent;
             }
 
             .mega-menu-links a:hover {
                 background: rgba(202,165,71,0.2);
-                color: #caa547;
-                border-left-color: #caa547;
+                color: #c8461a;
+                border-left-color: #c8461a;
+                padding-left: calc(8% + 5px);
             }
 
             .mobile-menu-toggle {
@@ -868,6 +889,10 @@
             .cpd-hours {
                 font-size: 42px;
             }
+
+            .logo img {
+                height: 55px;
+            }
         }
     </style>
 </head>
@@ -897,6 +922,9 @@
                                     <li><a href="core-values.html">Core Values</a></li>
                                     <li><a href="strategic-focus.html">Strategic Focus</a></li>
                                     <li><a href="impact-goals.html">Impact Goals</a></li>
+				    <li><a href="cm.html">Council Members</a></li>
+				    <li><a href="cd.html">Country Directors</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -1184,11 +1212,14 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Professional House<br>
-                    Education District<br>
-                    Global City, GC 12345</p>
-                    <p><strong>Email:</strong> info@ciet.org<br>
-                    <strong>Phone:</strong> +1 (555) 123-4567</p>
+                     <p>Chartered Institute of Education and Training (CIET)
+
+<br>
+                    1001 Bishop Street, Suite 2685A  <br>
+                   Honolulu, Hawaii 96813, USA</p>
+                    <p><strong>Email:</strong> info@cietglobal.us<br>
+                    <strong>Phone:</strong> +1 (480) 955-0876</p>
+
                 </div>
             </div>
             <div class="footer-bottom">

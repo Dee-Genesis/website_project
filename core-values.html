@@ -60,12 +60,13 @@
 
         /* ===== HEADER ===== */
         .site-header {
-            background: #1a1a1a;
-            color: #fff;
+            background: #ffffff;
+            color: #1a1a1a;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(202,165,71,0.2);
         }
 
         .header-flex {
@@ -89,7 +90,7 @@
         .logo a {
             font-size: 24px;
             font-weight: bold;
-            color: #fff;
+            color: #1a1a1a;
             letter-spacing: 0.5px;
         }
 
@@ -112,7 +113,7 @@
         }
 
         .main-nav > ul > li > a {
-            color: #fff;
+            color: #1a1a1a;
             font-weight: 500;
             padding: 30px 20px;
             display: block;
@@ -122,7 +123,8 @@
         }
 
         .main-nav > ul > li > a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(202,165,71,0.1);
+            color: #caa547;
         }
 
         /* Dropdown indicator */
@@ -135,8 +137,12 @@
             vertical-align: middle;
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
-            border-top: 4px solid #fff;
-            transition: transform 0.3s ease;
+            border-top: 4px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        .has-dropdown > a:hover::after {
+            border-top-color: #caa547;
         }
 
         /* Mega Menu Container - CIBIA Style */
@@ -224,7 +230,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1a1a1a;
             font-size: 28px;
             cursor: pointer;
         }
@@ -539,10 +545,11 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: #1a1a1a;
+                background: #ffffff;
                 max-height: calc(100vh - 100px);
                 overflow-y: auto;
                 overflow-x: hidden;
+                border-top: 1px solid rgba(202,165,71,0.2);
             }
 
             .main-nav.active {
@@ -555,7 +562,8 @@
 
             .main-nav > ul > li > a {
                 padding: 15px 5%;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                color: #1a1a1a;
             }
 
             .mega-menu {
@@ -564,7 +572,7 @@
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                background: #2a2a2a;
+                background: #f8f9fa;
                 display: none;
                 border-top: none;
                 max-height: 0;
@@ -587,13 +595,13 @@
 
             .mega-menu-links a {
                 padding: 12px 8%;
-                color: #ffffff;
+                color: #1a1a1a;
                 font-size: 14px;
                 border-left: 3px solid transparent;
             }
 
             .mega-menu-links a:hover {
-                background: rgba(202, 165, 71, 0.2);
+                background: rgba(202, 165, 71, 0.15);
                 color: #caa547;
                 border-left-color: #caa547;
             }
@@ -671,6 +679,9 @@
                                     <li><a href="core-values.html">Core Values</a></li>
                                     <li><a href="strategic-focus.html">Strategic Focus</a></li>
                                     <li><a href="impact-goals.html">Impact Goals</a></li>
+				    <li><a href="cm.html">Council Members</a></li>
+				    <li><a href="cd.html">Country Directors</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -819,11 +830,14 @@
 
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Professional House<br>
-                    Education District<br>
-                    Global City, GC 12345</p>
-                    <p><strong>Email:</strong> info@ciet.org<br>
-                    <strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p>Chartered Institute of Education and Training (CIET)
+
+<br>
+                    1001 Bishop Street, Suite 2685A  <br>
+                   Honolulu, Hawaii 96813, USA</p>
+                    <p><strong>Email:</strong> info@cietglobal.us<br>
+                    <strong>Phone:</strong> +1 (480) 955-0876</p>
+
                 </div>
             </div>
             <div class="footer-bottom">
